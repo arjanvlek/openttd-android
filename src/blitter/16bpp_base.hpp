@@ -17,6 +17,10 @@
 #include "../core/math_func.hpp"
 #include "../gfx_func.h"
 
+#ifndef __attribute__
+#define __attribute__(x)
+#endif
+
 /** Base for all 16bpp blitters. */
 class Blitter_16bppBase : public Blitter {
 public:
