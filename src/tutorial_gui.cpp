@@ -92,6 +92,9 @@ void OpenExternTutorialVideo(VideoLink_t *tutorial)
 #ifdef __ANDROID__
 	SDL_ANDROID_OpenExternalWebBrowser(link);
 #else
+#ifndef PATH_MAX
+#define PATH_MAX 4096
+#endif
 	char cmd[PATH_MAX] =
 #ifdef WIN32
 		"start ";
