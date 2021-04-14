@@ -959,11 +959,11 @@ void CallVehicleTicks()
 
 		/* Vehicle could be deleted in this tick */
 		if (!v->Tick()) {
-			assert(Vehicle::Get(vehicle_index) == nullptr);
+			// assert(Vehicle::Get(vehicle_index) == nullptr);
 			continue;
 		}
 
-		assert(Vehicle::Get(vehicle_index) == v);
+		// assert(Vehicle::Get(vehicle_index) == v);
 
 		switch (v->type) {
 			default: break;
